@@ -1,0 +1,21 @@
+import express from 'express'
+import React from 'react'
+import { renderToString } from 'react-dom/server'
+import Home from './client/components/Home'
+import Landing from './client/components/Landing'
+
+const app = express()
+
+app.get('/', (req, res) => {
+	const content = renderToString(<Home />)
+	res.send(content)
+})
+
+app.get('/landing', (req, res) => {
+	const content = renderToString(<Landing />)
+	res.send(content)
+})
+
+app.listen(3000, () => {
+	console.log('Listening on port 3000')
+})
