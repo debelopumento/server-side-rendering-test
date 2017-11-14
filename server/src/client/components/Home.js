@@ -6,7 +6,7 @@ const Home = () => {
 			<div>I'm the best home component</div>
 			<button
 				onClick={() => {
-					console.log('Hi there!')
+					console.log('home button clicked')
 				}}
 			>
 				Press me!
