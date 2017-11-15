@@ -1,18 +1,20 @@
 import React from 'react'
 
-const Landing = () => {
+const Home = () => {
 	return (
 		<div>
 			<div>I'm the best home component</div>
 			<button
 				onClick={() => {
-					console.log('Landing')
+					console.log('home button clicked')
 				}}
 			>
-				Landing page button
+				Press me!
 			</button>
 		</div>
 	)
 }
 
-export default Landing
+export default {
+	component: Home,
+}
